@@ -1,10 +1,13 @@
 ﻿import re
 
+# -*- coding: utf-8 -*-
+
 vacancies = []
 patternTypeID = 'vacancy_id":"\d*'
 patternID = 'vacancy_id":"'
+rowVacID = ''
 
-for line in open('error1.log'):
+for line in open('error1.log', encoding='utf-8'):
 	L = str(line)
 	forVac = re.search(patternTypeID,L)
 	if forVac != None:
